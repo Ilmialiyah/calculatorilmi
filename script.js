@@ -60,19 +60,19 @@ const calculate = () => {
     let result = ''
     switch(calculationOperator) {
         case "+":
-            result = partseFloat(prevNumber) + parseFloat(currentNumber)
+            result = parseFloat(prevNumber) + parseFloat(currentNumber)
             break
         case "-":
-            result = perseFloat(prevNumber) - perseFloat(currentNumber)
+            result = parseFloat(prevNumber) - parseFloat(currentNumber)
             break
         case "*":
-            result = perseFloat(prevNumber) * perseFloat(currentNumber)
+            result = parseFloat(prevNumber) * parseFloat(currentNumber)
             break
         case "/":
-            result = perseFloat(prevNumber) / perseFloat(currentNumber)
+            result = parseFloat(prevNumber) / parseFloat(currentNumber)
             break
         case "%":
-            result = perseFloat(currentNumber) /100
+            result = parseFloat(currentNumber) /100
             break
         default:
             break
