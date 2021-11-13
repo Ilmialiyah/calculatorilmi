@@ -32,7 +32,7 @@ const inputPercent = (percentage) => {
 const percentageSign = document.querySelector('.percentage')
 
 percentageSign.addEventListener('click', (event) => {
-    checkPersen = true
+    checkPercent = true
     inputPercent(event.target.value)
     updateScreen(calculationOperator)
 })
