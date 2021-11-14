@@ -25,16 +25,19 @@ numbers.forEach((number) => {
     })
 })
 
-const inputPercent = (percentage) => {
-    currentNumber /= 100
+const divPercent = (number) => {
+    if (currentNumber === '0') {
+        currentNumber = number;
+    } else {
+        currentNumber /= 100;
+    }
 }
 
-const percentageSign = document.querySelector('.percentage')
+const percentages = document.querySelector('.percentage')
 
-percentageSign.addEventListener('click', (event) => {
-    checkPercent = true
-    inputPercent(event.target.value)
-    updateScreen(calculationOperator)
+percentages.addEventListener('click', (event) => {
+    divPercent(event.target.value)
+    updateScreen(currentNumber)
 })
 
 const inputOperator = (operator) => {
